@@ -6,7 +6,7 @@
 // EXAMPLE: gcc memexec-c.c && cat /bin/id | ./a.out
 
 int
-main()
+main(int argc, char* argv[])
 {
     int fd;
     char buffer;
@@ -24,5 +24,5 @@ main()
         write(fd, &buffer, rc);
     }
 
-    execveat(fd, "", NULL, NULL, 0x1000);
+    execveat(fd, "", argv, NULL, 0x1000);
 }
