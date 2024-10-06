@@ -29,14 +29,13 @@ mov rax, 1
 mov rsi, rsp
 syscall
 
+; execveat
 
-; execve
-
-mov rax, 59
-lea rdi, [rel path]
-xor rsi, rsi
+mov rax, 322
+mov rdi, r9
+push 0x00
+mov rsi, rsp
 xor rdx, rdx
+xor r10, r10
+mov r8, 0x1000
 syscall
-
-path:
- db '/proc/self/fd/3', 0
