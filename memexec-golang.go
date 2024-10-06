@@ -3,11 +3,11 @@ package main
 // Example: go build memexec-golang.go && cat /bin/id | ./memexec-golang
 
 import (
-	"io"
+    "io"
     "fmt"
     "os"
-	"unsafe"
-	"syscall"
+    "unsafe"
+    "syscall"
 )
 
 func MemfdCreate(name string) (fd uintptr) {
